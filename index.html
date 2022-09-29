@@ -30,6 +30,24 @@
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn help">Help</button>
+
+      <div class="modal hidden">
+        <button class="xbtn">&times;</button>
+        <h1 class="helpTitle">Welcome To The Dice Game 😄</h1>
+        <p class="helpP">
+          ➡️First player to reach 100 points wins<br />
+          ➡️Each time player rolls dice, the dice number adds to current
+          score<br />
+          ➡️If player rolls a 1, they lose all current points. switched to other
+          opponent<br />
+          ➡️Each player can roll the dice as many times unless landed on a 1<br />
+          ➡️Player can hold their current points so turn is switched to other
+          opponent<br />
+        </p>
+      </div>
+
+      <div class="overlay hidden"></div>
     </main>
     <script src="script.js"></script>
   </body>

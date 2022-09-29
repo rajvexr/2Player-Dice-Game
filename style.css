@@ -123,14 +123,14 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
+.btn--new, .btn--hold, .btn--roll::first-letter {
   font-size: 2.4rem;
   display: inline-block;
   margin-right: 0.7rem;
 }
 
 .btn--new {
-  top: 4rem;
+  top: 6rem;
 }
 .btn--roll {
   top: 39.3rem;
@@ -168,4 +168,53 @@ main {
 
 .hidden{
   display: none;
+}
+
+.help{
+  top: 1rem;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.xbtn{
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.helpTitle{
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.helpP{
+  font-size: 1.8rem;
 }

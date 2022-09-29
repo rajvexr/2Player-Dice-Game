@@ -11,7 +11,17 @@ let player1 = document.querySelector('.player--1');
 let btnHold = document.querySelector('.btn--hold');
 let btnRestart = document.querySelector('.btn--new');
 
+let help = document.querySelector('.help');
+let modal = document.querySelector('.modal');
+let overlay = document.querySelector('.overlay');
+let modalX = document.querySelector('.xbtn');
+
 let scores, currentScore, activePlayer, playing;
+
+function OpenCloseModal() {
+  modal.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
+}
 
 function starting() {
   scores = [0, 0]; //its the scoreboards
@@ -83,4 +93,18 @@ btnHold.addEventListener('click', () => {
 
 btnRestart.addEventListener('click', () => {
   starting();
+});
+
+help.addEventListener('click', () => {
+  OpenCloseModal();
+});
+
+modalX.addEventListener('click', () => {
+  OpenCloseModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    OpenCloseModal();
+  }
 });
